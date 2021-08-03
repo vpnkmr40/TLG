@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "UploadFile";
+}
+
+<head>
+    <meta http-equiv="refresh" content="10" />
+</head>
+<h2>UploadFile</h2>
+
+@using (Html.BeginForm("Xmlwelform", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<div>
+    @Html.TextBox("xmlfile", "", new { type = "file", required = "required" }) <br />
+    <input type="submit" value="Upload" /> <br />
+    @ViewBag.Message
+</div>
+}
